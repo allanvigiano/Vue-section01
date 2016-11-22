@@ -3,7 +3,9 @@ new Vue ({
     data: {
         "title": "Hello World"
     },
-    method: {
-
+    methods: {
+        sayHello: function () {
+            return 'Hello'
+        }
     }
 });
