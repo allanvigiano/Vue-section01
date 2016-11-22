@@ -1,14 +1,11 @@
 new Vue ({
     el: "#app",
     data: {
-        title: "Hello World",
-        link: "http://www.google.com",
-        finishedLink: "<a href='http://www.google.com'>Gootle</a>"
+        counter: 0,
     },
     methods: {
-        sayHello: function () {
-            this.title = "Hello!";
-            return this.title;
+        increase: function () {
+            return this.counter ++;
         }
     }
 });
