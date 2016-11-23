@@ -10,6 +10,14 @@ new Vue ({
             return this.counter > 5 ? 'Grater 5' : 'Smaller than 5';
         }
     },
+    watch: {
+        counter: function () {
+            var vm = this;
+            setTimeout(function () {
+                vm.counter = 0;
+            },2000);
+        }
+    },
     methods: {
         result: function () {
             console.log('Method');
