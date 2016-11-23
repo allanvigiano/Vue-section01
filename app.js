@@ -2,16 +2,18 @@ new Vue ({
     el: "#app",
     data: {
         counter: 0,
-        x: 0,
-        y: 0,
+        secondCounter: 0,
+    },
+    computed: {
+        output: function () {
+            console.log('Computed');
+            return this.counter > 5 ? 'Grater 5' : 'Smaller than 5';
+        }
     },
     methods: {
-        increase: function (step, event) {
-            this.counter += step;
-        },
-        updateCoordinates: function (event) {
-            this.x = event.clientX;
-            this.y = event.clientY;
+        result: function () {
+            console.log('Method');
+            return this.counter > 5 ? 'Grater 5' : 'Smaller than 5';
         }
     }
 });
